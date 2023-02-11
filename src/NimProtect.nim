@@ -1,9 +1,10 @@
 import std/[macros, times, md5]
 import RC4
 
-macro protectString*(data: static[string]): untyped =
+macro protectString*(data: static[string]): string =
   # rc4 key = md5(cpu time())
-  const key = getMD5($cpuTime())
+  let key = getMD5($cpuTime())
+  echo key
   # encrypt the string
   let encrypted_data = toRC4(key, data)
   # convert vars to NimNode in order to inject it to the code
@@ -12,3 +13,7 @@ macro protectString*(data: static[string]): untyped =
   # inject the new line back to code 
   quote do:
     fromRC4(`key_nn`, `encrypted_data_nn`)
+
+
+echo protectString("heloo")
+echo protectString("helloo")
