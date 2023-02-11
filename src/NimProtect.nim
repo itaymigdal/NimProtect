@@ -13,7 +13,3 @@ macro protectString*(data: static[string]): string =
   # inject the new line back to code 
   quote do:
     fromRC4(`key_nn`, `encrypted_data_nn`)
-
-
-echo protectString("heloo")
-echo protectString("helloo")
