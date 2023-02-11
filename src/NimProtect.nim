@@ -1,7 +1,7 @@
 import std/[macros, times, md5]
 import RC4
 
-macro protectString(data: static[string]): untyped =
+macro protectString*(data: static[string]): untyped =
   # rc4 key = md5(cpu time())
   const key = getMD5($cpuTime())
   # encrypt the string
@@ -12,9 +12,3 @@ macro protectString(data: static[string]): untyped =
   # inject the new line back to code 
   quote do:
     fromRC4(`key_nn`, `encrypted_data_nn`)
-
-
-let protected_c2 = protectString("https://protected-c2.com")
-let exposed_c2 = "https://exposed-c2.com"
-
-echo protected_c2
