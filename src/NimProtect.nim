@@ -4,7 +4,6 @@ import RC4
 macro protectString*(data: static[string]): string =
   # rc4 key = md5(cpu time())
   let key = getMD5($cpuTime())
-  echo key
   # encrypt the string
   let encrypted_data = toRC4(key, data)
   # convert vars to NimNode in order to inject it to the code
