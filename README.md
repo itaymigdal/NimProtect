@@ -7,7 +7,7 @@ I built it in order to fullfill the need for compile-time string encryptor that 
 
 Every string is RC4 encrypted with different MD5 key (quick disclaimer: remember that RC4 is insecure algorithm and all strings can be decrypted with some reverse engineering work).
 
-You may need to add the following flag to the compiler in order to enable `cpuTime()` at compile time: `--benchmarkVM:on`.
+Compile with: `--benchmarkVM:on`.
 
 ## Installation
 
