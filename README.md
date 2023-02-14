@@ -18,7 +18,7 @@ nimble install https://github.com/itaymigdal/NimProtect
 ## Usage
 
 ```
-import NimProtect
+import nimprotect
 
 let c2_url = protectString("https://protected-c2-server.com")
 ```
