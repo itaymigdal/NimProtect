@@ -12,7 +12,7 @@ Compile with: `--benchmarkVM:on`
 ## Installation
 
 ```
-nimble install https://github.com/itaymigdal/NimProtect
+nimble install nimprotect
 ```
 
 ## Usage
