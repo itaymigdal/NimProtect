@@ -1,4 +1,6 @@
 import std/[macros, times, md5]
+import strutils
+import sequtils
 import RC4
 
 macro protectString*(data: static[string]): string =
@@ -12,3 +14,12 @@ macro protectString*(data: static[string]): string =
   # inject the new line back to code 
   quote do:
     fromRC4(`key_nn`, `encrypted_data_nn`)
+
+macro splitString*(data: static[string]): string =
+  # split the string
+  let splited = toSeq(data.items)
+  # convert to NimNode
+  let splited_nn = newLit(splited)
+  # inject the new line back to code 
+  quote do:
+    join(`splited_nn`)
