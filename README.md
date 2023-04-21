@@ -11,7 +11,7 @@ Compile with: `--benchmarkVM:on`
 
 ### Update:
 
-Added splitString() macro to split and hide big suspicious strings.
+Added `splitString()` macro to split and hide big suspicious strings.
 
 ## Installation
 
