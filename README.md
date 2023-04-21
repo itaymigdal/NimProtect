@@ -11,7 +11,7 @@ Compile with: `--benchmarkVM:on`
 
 ### Update:
 
-Added `splitString()` macro to split and hide big suspicious strings.
+Added `splitString()` macro to split and hide big suspicious strings (takes LONG to compile!)
 
 ## Installation
 
@@ -25,7 +25,7 @@ nimble install NimProtect
 import nimprotect
 
 let c2_url = protectString("https://protected-c2-server.com")
-let malicious_base64_shellcode_blob = protectString(splitString(""H4sIAAAAAAAACuy9eXgUxdYw3hMyEBCYY..."))
+let malicious_base64_shellcode_blob = protectString(splitString(""H4sIAAAAAAAACuy9eXgUxdYw3hMyEBCYY..."))  # Takes long to compile, be patient
 ```
 
 ### *Easy Peasy :grin: :metal:*
