@@ -1,6 +1,6 @@
 # Package
 
-version       = "0.1.0"
+version       = "0.2.0"
 author        = "Itay Migdal"
 description   = "NimProtect is a tiny single-macro library for protecting sensitive strings in compiled binaries"
 license       = "MIT"
