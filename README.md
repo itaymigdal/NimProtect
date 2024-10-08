@@ -25,7 +25,7 @@ nimble install NimProtect
 import nimprotect
 
 let c2_url = protectString("https://protected-c2-server.com")
-let malicious_base64_shellcode_blob = protectString(splitString(""H4sIAAAAAAAACuy9eXgUxdYw3hMyEBCYY..."))  # Takes long to compile, be patient
+let malicious_base64_shellcode_blob = protectString(splitString("H4sIAAAAAAAACuy9eXgUxdYw3hMyEBCYY..."))  # Takes long to compile, be patient
 ```
 
 ### *Easy Peasy :grin: :metal:*
